@@ -1,7 +1,7 @@
 const socials = [
   {
     label: "GitHub",
-    href: "https://github.com/lewiswhitehill",
+    href: "https://github.com/lewisjwhitehill",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path
@@ -13,7 +13,7 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/lewiswhitehill",
+    href: "https://www.linkedin.com/in/lewisjwhitehill",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path
