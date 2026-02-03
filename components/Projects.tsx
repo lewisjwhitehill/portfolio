@@ -6,43 +6,65 @@ import { buttonClasses } from "./ui/Button";
 export type Project = {
   title: string;
   description: string;
-  stack: string[];
+  techStack: string[];
   codeUrl: string;
   demoUrl: string;
 };
 
 const projects: Project[] = [
   {
-    title: "SignalTrace",
+    title: "Calendo",
     description:
-      "Observability dashboard for AI microservices with latency profiling and real-time alerts.",
-    stack: ["Next.js", "FastAPI", "Postgres", "Prometheus"],
-    codeUrl: "https://github.com/lewiswhitehill/signaltrace",
-    demoUrl: "https://signaltrace-demo.vercel.app"
+      "Natural-language calendar assistant that turns free-form text into structured Google Calendar events.",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "NextAuth",
+      "Google Calendar API",
+      "OpenAI",
+      "Vercel"
+    ],
+    codeUrl: "https://github.com/lewiswhitehill/calendo",
+    demoUrl: "https://calendo-demo.example.com"
   },
   {
-    title: "AgentOps Kit",
+    title: "AI Photobooth",
     description:
-      "Toolkit for building robust agent workflows, including memory storage and tool orchestration.",
-    stack: ["TypeScript", "LangChain", "Redis", "Docker"],
-    codeUrl: "https://github.com/lewiswhitehill/agentops-kit",
-    demoUrl: "https://agentops-kit.vercel.app"
+      "Backend for an AI-powered photobooth that applies style transformations to uploaded images and stores them on S3.",
+    techStack: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "AWS S3",
+      "Prisma",
+      "PostgreSQL",
+      "Docker"
+    ],
+    codeUrl: "https://github.com/lewiswhitehill/ai-photobooth",
+    demoUrl: "https://photobooth-demo.example.com"
   },
   {
-    title: "InfraPulse",
+    title: "Weather Travel Assistant",
     description:
-      "Backend-heavy system that streams metrics from edge devices into a unified dashboard.",
-    stack: ["Go", "Kafka", "ClickHouse", "Grafana"],
-    codeUrl: "https://github.com/lewiswhitehill/infrapulse",
-    demoUrl: "https://infrapulse.io"
+      "Trip-planning helper that combines forecast data with long-term climatology to explain what the weather will actually feel like for specific dates and locations.",
+    techStack: ["Python", "FastAPI", "LangChain", "Open-Meteo API", "Docker"],
+    codeUrl: "https://github.com/lewiswhitehill/weather-travel-assistant",
+    demoUrl: "https://weather-travel-demo.example.com"
   },
   {
-    title: "Recall",
+    title: "Spot2AppVL",
     description:
-      "AI-assisted knowledge base with semantic search and audit-ready provenance tracking.",
-    stack: ["Next.js", "Prisma", "Postgres", "OpenAI"],
-    codeUrl: "https://github.com/lewiswhitehill/recall",
-    demoUrl: "https://recall-ai.vercel.app"
+      "Playlist converter that lets users move playlists between Spotify, Apple Music, and YouTube.",
+    techStack: [
+      "React",
+      "Vite",
+      "TypeScript",
+      "Vercel Functions",
+      "Spotify API",
+      "YouTube API"
+    ],
+    codeUrl: "https://github.com/lewiswhitehill/spot2appvl",
+    demoUrl: "https://spot2appvl-demo.example.com"
   }
 ];
 
@@ -65,7 +87,7 @@ export function Projects() {
                   {project.description}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {project.stack.map((tech) => (
+                  {project.techStack.map((tech) => (
                     <Tag key={tech}>{tech}</Tag>
                   ))}
                 </div>
