@@ -45,7 +45,7 @@ export function SocialLinks() {
           key={social.label}
           href={social.href}
           aria-label={social.label}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 text-ink transition-colors hover:border-accent/30 hover:bg-accent/10 hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-slate-100 transition-colors hover:border-white/40 hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
         >
           <span className="h-5 w-5">{social.icon}</span>
         </a>

@@ -20,13 +20,13 @@ const timeline = [
 export function About() {
   return (
     <section id="about" className="py-20">
-      <div className="mx-auto w-full max-w-6xl px-6">
+      <div className="mx-auto w-full max-w-6xl px-4 md:px-6">
         <SectionHeading
           title="About"
           subtitle="Backend-leaning engineer with a focus on AI tooling, data pipelines, and infra reliability."
         />
         <div className="grid gap-10 md:grid-cols-2">
-          <div className="space-y-4 text-sm text-muted sm:text-base">
+          <div className="space-y-4 text-sm text-slate-300 sm:text-base">
             <p>
               I'm Lewis Whitehill, a backend-leaning software engineer based in Berkeley,
               CA. I enjoy building systems around AI models, data, and developer tooling -
@@ -37,11 +37,11 @@ export function About() {
               more about data-driven environmental science.
             </p>
           </div>
-          <div className="space-y-3 rounded-xl border border-ink/10 bg-surface p-6 shadow-card">
+          <div className="space-y-3 rounded-2xl border border-white/10 bg-[#223B5E] p-6 shadow-card">
             {timeline.map((item) => (
               <div key={item.title}>
-                <p className="text-sm font-semibold text-ink">{item.title}</p>
-                <p className="mt-1 text-sm text-muted">{item.detail}</p>
+                <p className="text-sm font-semibold text-white">{item.title}</p>
+                <p className="mt-1 text-sm text-slate-300">{item.detail}</p>
               </div>
             ))}
           </div>

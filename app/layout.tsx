@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen font-sans">
+      <body className="min-h-screen bg-[#203354] text-slate-100 font-sans">
         {children}
       </body>
     </html>

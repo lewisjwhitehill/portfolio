@@ -7,7 +7,7 @@ export function Tag({ className, ...props }: TagProps) {
   return (
     <span
       className={classNames(
-        "inline-flex items-center rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent",
+        "inline-flex items-center rounded-full border border-slate-400/40 bg-slate-900/40 px-3 py-1 text-xs font-medium text-slate-200",
         className
       )}
       {...props}

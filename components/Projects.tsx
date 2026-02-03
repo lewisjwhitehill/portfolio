@@ -71,7 +71,7 @@ const projects: Project[] = [
 export function Projects() {
   return (
     <section id="projects" className="py-20">
-      <div className="mx-auto w-full max-w-6xl px-6">
+      <div className="mx-auto w-full max-w-6xl px-4 md:px-6">
         <SectionHeading
           title="Projects"
           subtitle="A few recent builds focused on AI infrastructure and backend-heavy systems."
@@ -80,10 +80,10 @@ export function Projects() {
           {projects.map((project) => (
             <Card key={project.title} className="flex h-full flex-col">
               <div className="flex-1">
-                <h3 className="text-lg font-semibold text-ink">
+                <h3 className="text-lg font-semibold text-white">
                   {project.title}
                 </h3>
-                <p className="mt-2 text-sm text-muted">
+                <p className="mt-2 text-sm text-slate-300">
                   {project.description}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
