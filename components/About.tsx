@@ -2,7 +2,7 @@ import { SectionHeading } from "./ui/SectionHeading";
 
 const timeline = [
   {
-    title: "2019-2025",
+    title: "2021-2025",
     detail: "B.S. in Computer Science, UC Santa Cruz"
   },
   {

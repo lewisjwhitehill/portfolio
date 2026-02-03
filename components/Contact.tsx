@@ -35,10 +35,10 @@ export function Contact() {
               collaborations. Reach out anytime.
             </p>
             <a
-              href="mailto:lewis@example.com"
+              href="mailto:lwhitehi@ucsc.edu"
               className="inline-flex items-center font-semibold text-white hover:text-slate-200"
             >
-              lewis@example.com
+              lwhitehi@ucsc.edu
             </a>
           </div>
           <form

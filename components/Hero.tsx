@@ -18,8 +18,8 @@ export function Hero() {
             <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
               Lewis Whitehill
             </h1>
-            <p className="mt-3 max-w-2xl text-base text-slate-100 sm:text-lg">
-              Backend-leaning software engineer building AI-powered tools and infrastructure.
+            <p className="mt-3 max-w-2xl text-base font-semibold text-slate-100 sm:text-lg">
+              Backend-leaning software engineer building AI-powered tools and systems.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
@@ -45,8 +45,8 @@ export function Hero() {
               Backend • AI • Infra
             </p>
             <p className="mt-3 text-sm text-slate-200 sm:text-base">
-              I like turning messy real-world workflows into reliable systems with solid
-              backends, LLMs, and good developer ergonomics.
+              I build backend-heavy systems that make chaotic, real-world workflows dependable, 
+              combining AI tooling with pragmatic infrastructure and clean developer experience.
             </p>
           </div>
           <div className="md:justify-self-end">
