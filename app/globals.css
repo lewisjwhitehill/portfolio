@@ -19,6 +19,11 @@ body {
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
+.font-heading {
+  font-family: var(--font-sora), var(--font-inter), ui-sans-serif, system-ui,
+    sans-serif;
+}
+
 a {
   @apply transition-colors;
 }

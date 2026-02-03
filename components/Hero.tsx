@@ -15,7 +15,7 @@ export function Hero() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0f1f38]/85 via-[#0f1f38]/40 to-transparent" />
           <div className="relative z-10 px-6 py-10 sm:px-10 sm:py-12">
-            <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            <h1 className="font-heading text-4xl font-semibold tracking-tight text-white sm:text-5xl">
               Lewis Whitehill
             </h1>
             <p className="mt-3 max-w-2xl text-base font-semibold text-slate-100 sm:text-lg">

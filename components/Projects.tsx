@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card } from "./ui/Card";
 import { SectionHeading } from "./ui/SectionHeading";
 import { Tag } from "./ui/Tag";
@@ -8,7 +9,8 @@ export type Project = {
   description: string;
   techStack: string[];
   codeUrl: string;
-  demoUrl: string;
+  demoUrl?: string;
+  imageUrl?: string;
 };
 
 const projects: Project[] = [
@@ -24,8 +26,9 @@ const projects: Project[] = [
       "OpenAI",
       "Vercel"
     ],
-    codeUrl: "https://github.com/lewiswhitehill/calendo",
-    demoUrl: "https://calendo-demo.example.com"
+    codeUrl: "https://github.com/lewisjwhitehill/calendo",
+    demoUrl: "https://calendo-demo.example.com",
+    imageUrl: "/project_banners/calendo_banner.png"
   },
   {
     title: "AI Photobooth",
@@ -40,31 +43,33 @@ const projects: Project[] = [
       "PostgreSQL",
       "Docker"
     ],
-    codeUrl: "https://github.com/lewiswhitehill/ai-photobooth",
-    demoUrl: "https://photobooth-demo.example.com"
+    codeUrl: "https://github.com/lewisjwhitehill/photobooth",
+    demoUrl: "https://photobooth-demo.example.com",
+    imageUrl: "/project_banners/photobooth_banner.png"
   },
   {
     title: "Weather Travel Assistant",
     description:
       "Trip-planning helper that combines forecast data with long-term climatology to explain what the weather will actually feel like for specific dates and locations.",
     techStack: ["Python", "FastAPI", "LangChain", "Open-Meteo API", "Docker"],
-    codeUrl: "https://github.com/lewiswhitehill/weather-travel-assistant",
-    demoUrl: "https://weather-travel-demo.example.com"
+    codeUrl: "https://github.com/lewisjwhitehill/whatsitlike",
+    demoUrl: "https://weather-travel-demo.example.com",
+    imageUrl: "/project_banners/weather_banner.png"
   },
   {
-    title: "Spot2AppVL",
+    title: "Recipe Manager",
     description:
-      "Playlist converter that lets users move playlists between Spotify, Apple Music, and YouTube.",
+      "A full‑stack py4web application that lets users create, browse, and share recipes with an auto‑calorie engine, secure author‑only editing, and public JSON search APIs.",
     techStack: [
-      "React",
-      "Vite",
-      "TypeScript",
-      "Vercel Functions",
-      "Spotify API",
-      "YouTube API"
+      "Python",
+      "py4web",
+      "PyDAL",
+      "SQL",
+      "Vue.js",
+      "HTML"
     ],
-    codeUrl: "https://github.com/lewiswhitehill/spot2appvl",
-    demoUrl: "https://spot2appvl-demo.example.com"
+    codeUrl: "https://github.com/ucsc2025-cse183/project-16",
+    imageUrl: "/project_banners/recipe_banner.png"
   }
 ];
 
@@ -78,12 +83,26 @@ export function Projects() {
         />
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
-            <Card key={project.title} className="flex h-full flex-col">
-              <div className="flex-1">
-                <h3 className="text-lg font-semibold text-white">
+            <Card key={project.title} className="flex h-full flex-col gap-5">
+              <div className="relative h-36 overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60">
+                {project.imageUrl ? (
+                  <Image
+                    src={project.imageUrl}
+                    alt={`${project.title} banner`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="h-full w-full bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.12),_rgba(255,255,255,0)_70%)]" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f1f38]/80 via-transparent to-transparent" />
+                <div className="font-heading absolute bottom-4 left-4 text-lg font-semibold text-white">
                   {project.title}
-                </h3>
-                <p className="mt-2 text-sm text-slate-300">
+                </div>
+              </div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed text-slate-200">
                   {project.description}
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
